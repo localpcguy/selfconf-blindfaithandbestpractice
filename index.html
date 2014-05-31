@@ -1,394 +1,810 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+        <title>Blind Faith and Best Practices | Mike Behnke | @localpcguy</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+        <link rel="stylesheet" href="css/custom.css">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/vs.css"> 
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
+    <body>
 
-		<div class="reveal">
+        <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section data-background="img/boards_background.jpg" class="overimg">
+                    <div class="bodycopy">
+                        <h1>Blind Faith and<br>Best Practices</h1>
+                        <p>
+                            <small><a href="http://local-pc-guy.com">Mike Behnke</a><br><a href="http://twitter.com/localpcguy">@localpcguy</a></small>
+                        </p>
+                    </div>
+                    <aside class="notes">
+                        <p>Let's dive into best practices and find more about what they are and why we care</p>
+                        <p>I'm Mike Behnke, and I want to chat about a programmer's journey as they start out</p>
+                    </aside>
+                </section>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+                <section data-background='img/Commodore_Plus_4.jpg' data-background-size="960px" data-background-transition="slide" class="overimg">
+                    <div class="bodycopy">
+                        <p></p>
+                        <h2>Starting Out</h2>
+                    </div>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+                    <aside class="notes">
+                        <p>As programmers, we all start somewhere.  I started with Basic, on a Commodore Plus 4, a failed relative of the popular Commodore 64.  Anyone know about those?</p>
+                        <p>Front end dev for Enlighten Agency</p>
+                    </aside>
+                </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+                <section data-background="img/old_usa_map.jpg" class="overimg">
+                    <div class="bodycopy">
+                        <h2>Programmer's Journey</h2>
+                    </div>
+                    <aside class="notes">
+                        <p>As programmers start out, like an old map - remember when you looked at these?</p>
+                        <p>Things are the wrong size, shape.  Some areas are just "unknown, here there be dragons"...</p>
+                        <p>Kinda like new programmers when they get started</p>
+                        <p>They have a general idea of what they are doing, but things in this area are fuzzy, over there is stuff that is completely foreign/unknown..."here there be closures"</p>
+                        <p>As you program, run into problems, hacky solutions</p>
+                        <p>As you progress, you start to know that your hacks are bad, so start looking into what you "should" do instead</p>
+                        <p>Start looking around and say, "there must be a better way"</p>
+                    </aside>
+                </section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
+                <section>
+                    <h2>There must be a better way</h2>
+                    <p>At some point while learning, we've all come to this point, right?</p>
+                    <img src="img/better-way.jpg" />
+                </section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+                <section>
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
+                    <section>
+                        <h2>Enter...<span class="fragment" data-fragment-index="1">The Best Practice</span></h2>
+                        <p class="fragment" data-fragment-index="2">Commercial or professional procedures that are accepted or prescribed as being correct or most effective.</p>
+                    </section>
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+                    <section>
+                        <h2>Best Coding Practices</h2>
+                        <p>==<br>a set of informal rules that the software development community has learned over time which can help improve the quality of software.</p>
+                        <aside class="notes">
+                            <p>in our industry, being rather young still, more informal</p>
+                            <p>Still, there are a variety of Best Practices</p>
+                            <p>Are B.P. misguided attempts to control devs</p>
+                        </aside>
+                    </section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+                    <section>
+                        <h2>Misguided?</h2><br>
+                        <ul>
+                            <li>Most "Best Practices" in Software Engineering are there to keep bad programmers from doing too much damage<br><br></li>
+                            <li>The only "best practice" you should be using all the time is "Use Your Brain"</li>
+                        </ul>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+                        <aside class="notes">
+                            <p>Many people feel that best practices are just misguided attempts to force everyone to do things the same way</p>
+                            <p>no allowance for innovation or immagination</p>
+                        </aside>
+                    </section>
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+                    <section>
+                        <h2>Blind Faith?</h2>
+                        <p>==<br>a belief without true understanding,<br>perception, or discrimination</p>
+                        <br>
+                        <p><small>Are Best Practices just blind faith in<br>people that came before us<br>or that we deem smarter than us?</small></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Brings us to Blind Faith part from the name of the talk.  What is it?</li>
+                                <li>Are Best Practices just another term for Blind Faith?</li>
+                                <li>Or do we take the time to educate and decide for ourselves?</li>
+                                <li>It's easy to see someone giving a talk, or representing a large company, and take their word for it that this is the way things should be done.</li>
+                            </ul>
+                        </aside>
+                    </section>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+                    <section>
+                        <h2>My Goal</h2>
+                        <p>To encourage everyone to look at best practices and know WHY they use the ones they do, and WHEN to discard ones that no longer are effective.</p>
+                    </section>
 
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+                    <section>
+                        <h2>And To Encourage Best Practices...But</h2>
+                        <p class="fragment" data-fragment-index="1">Make sure they really are, and know when to follow them</p>
+                        <br>
+                        <p class="fragment" data-fragment-index="2">And when to ignore them</p>
+                    </section>
+                </section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
+                <section data-background="img/examine.jpg" class="overimg">
+                    <div class="bodycopy">
+                        <h2>Examination</h2>
+                        <p>Let's take a look at some best practices</p>
+                        <p>Some are obvious, others we'll talk about the why a bit more</p>
+                        <p style="position: absolute; bottom: 5px; right: 15px;"><small><small><a href="https://www.flickr.com/photos/saracimino/6738710915/sizes/l/" target="_blank">photo by Sara Cimino</a></small></small></p>
+                    </div>
+                </section>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
+                <section>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+                    <section data-background="img/document.jpg" class="overimg">
+                        <div class="bodycopy"><p></p>
+                            <h1>HTML</h1>
+                        </div>
+                    </section>
 
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
+                    <section>
+                        <h2>Semantics Matter</h2>
+                        <p>Help screen readers, Google, and other<br>machines/bots parse meaning from markup</p>
+                        <pre><code data-trim contenteditable>&lt;div class="header"&gt;
+    &lt;ul class="nav"&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="body"&gt;&lt;/div&gt;
+&lt;div class="footer"&gt;&lt;/div&gt;
 
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
+&lt;!-- vs --&gt;
 
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
+&lt;header&gt;
+    &lt;nav&gt;&lt;/nav&gt;
+&lt;/header&gt;
+&lt;section&gt;&lt;/section&gt;
+&lt;footer&gt;&lt;/footer&gt;</code></pre>
+                    </section>   
+                    <section>
+                        <h2>HTML5 Semantics</h2>
+                        <img src="img/html5-semantics.png" alt="HTML5 semantics">
+                        <p><small><a href="http://html5doctor.com/lets-talk-about-semantics/" target="_blank">Lets talk about semantics</a></small></p>
+                    </section>   
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+                    <section>
+                        <h2>Everything in the proper place</h2>
+                        <ul>
+                            <li>JavaScript:<br>&nbsp;&nbsp;&nbsp;-&nbsp;just before body close<br>&nbsp;&nbsp;&nbsp;-&nbsp;with exceptions for scripts like Modernizr<br>&nbsp;&nbsp;&nbsp;-&nbsp;analytics?<br><br></li>
+                            <li>CSS<br>&nbsp;&nbsp;&nbsp;-&nbsp;in the head - prevents layout readjustment<br>&nbsp;&nbsp;&nbsp;-&nbsp;before any JavaScript to prevent possible blocking</li>
+                        </ul>
+                    </section>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+                    <section>
+                        <h2><a href="http://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a></h2>
+                        <ul>
+                            <li>Great starting point.</li>
+                            <li>"A professional front-end template for building fast, robust, and adaptable web apps or sites."</li>
+                            <li>Great reference guide</li>
+                            <li>Performance - check out the <a href="https://github.com/h5bp/server-configs" target="_blank">various server configs</a></li>
+                        </ul>
+                        <aside class="notes">
+                            <p>great to read through some of the issues, lots of reasoning for why things are done different ways, or to look back through the history of the code for how it's evolved over time</p>
+                        </aside>
+                    </section>
 
-    var nodes = document.querySelectorAll( selector );
+                    <section>
+                        <h2>HTML5 Boilerplate<br>the code</h2>
+                        <pre><code data-trim contenteditable>&lt;!doctype html&gt;
+&lt;html class="no-js" lang=""&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;meta name="description" content=""&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+        &lt;!-- Place favicon.ico and apple-touch-icon(s) in the root directory --&gt;
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+        &lt;link rel="stylesheet" href="css/normalize.css"&gt;
+        &lt;link rel="stylesheet" href="css/main.css"&gt;
+        &lt;script src="js/vendor/modernizr-2.8.0.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--[if lt IE 8]&gt;
+            &lt;p class="browsehappy"&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href="http://browsehappy.com/"&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;
+        &lt;![endif]--&gt;
+
+        &lt;!-- Add your site or application content here --&gt;
+        &lt;p&gt;Hello world! This is HTML5 Boilerplate.&lt;/p&gt;
+
+        &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;window.jQuery || document.write('&lt;script src="js/vendor/jquery-1.11.1.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+        &lt;script src="js/plugins.js"&gt;&lt;/script&gt;
+        &lt;script src="js/main.js"&gt;&lt;/script&gt;
+
+        &lt;!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --&gt;
+        &lt;script&gt;
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </section>
+                </section>
+
+                <section>
+
+                    <section data-background="img/cascadingfalls.jpg" class="overimg">
+                        <div class="bodycopy"><p></p>
+                            <h1>CSS</h1>
+                        </div>
+                    </section>
+
+                    <section data-background="img/oneway.jpg" class="overimg">
+                        <div class="bodycopy">
+                            <h2>General Rules</h2>
+                            <ul>
+                                <li>Use a reset (or normalize) style sheet</li> 
+                                <li>Avoid browser hacks<br><small>(use HTML Conditional Comments to set body classes for old IEs)</small></li>
+                            </ul>
+                            <pre><code data-trim contenteditable>&lt;!doctype html&gt;
+&lt;!--[if lt IE 7]&gt;      &lt;html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7]&gt;         &lt;html class="no-js lt-ie9 lt-ie8" lang=""&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8]&gt;         &lt;html class="no-js lt-ie9" lang=""&gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class="no-js" lang=""&gt; &lt;!--&lt;![endif]--&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Clean Stylesheets</h2>
+                        <p>Provide Stylesheet information and indicate structure</p>
+                        <pre><code data-trim contenteditable>/* stylesheet for Corp Bar
+File created date: 09.15.2010
+Last modified date: 06.04.2012
+By: [name]
+
+For: [section]
+*/
+
+/* Table of Contents
+- Typeography
+- Link Styles
+- Other sitewide styles
+- Actions
+- Layout
+- HEADER
+- TOP NAV
+- MAINCONTENT
+- FOOTER
+*/
+
+(…later in the document…)
+/* =Layout */ (etc.)</code></pre>
+
+                    </section>
+
+                    <section>
+                        <h2>Selectors</h2>
+                        <ul>
+                            <li>Avoid IDs for styling - specificity problems, not reusable</li>
+                            <li>As short as possible, reduce specificity</li>
+                            <li>Use shorthand properties when possible</li>
+                        </ul>
+                        <pre><code data-trim contenteditable>/* Bad */
+#sidebar {
+    background-color: #fff;
+    background-image: (bg.png);
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffff00;
+    font-family: Georgia, serif;
+    font-size: 1.33em;
+    line-height: 1.33em;
+    font-weight: normal;
+    margin: 10px 20px 10px 20px;
+    padding: .1em;
 }
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+/* Better */
+.sidebar {
+    background: #fff url(bg.png) repeat-x 0 0;
+    border: 1px solid #ff0;
+    font: normal 1.33em/1.33 Georgia, serif;
+    margin: 10px 20px;
+    padding: .1em;
+}</code></pre>
+                    </section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+                    <section>
+                        <h2>Multiple files</h2>
+                        <p>Prefer multiple, smaller CSS files over a single monolithic file.</p>
+                        <p>Concatenate and minify for performance</p>
+                    </section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
+                    <section>
+                        <h2>PreProcessors</h2>
+                        <p>Quickly becoming best practice to use a preprocessor</p>
+                        <ul>
+                            <li>Adds to developer efficiency</li>
+                            <li>Reduces errors</li>
+                            <li>Prevents repetition</li>
+                            <li>Careful: Don't over-complicate things</li>
+                            <li>Careful: Don't over-nest selectors</li>
+                        </ul>
+                        <br><br>
+                        <p>Oh, which one, Sass, Less or Stylus? Flip a coin, draw<br>straws...or just base it on your framework</p>
+                        <aside class="notes">
+                            <p>See Getting Sassy with CSS from yesterday's talks by Julie Cameron</p>
+                            <p>Which one is not ever a "best practice"</p>
+                        </aside>
+                    </section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+                    <section>
+                        <h2>Modularize your CSS</h2>
+                        <p><a href="http://smacss.com/" target="_blank">SMACSS</a> is a popular style</p>
+                        <ul>
+                            <li>Make elements portable, reusable</li>
+                            <li>No longer tied to a page or section</li>
+                        </ul>
+                        <pre><code data-trim contenteditable>&lt;div class="fldr fldr-callout"&gt;
+    &lt;h2 class="fldr-name"&gt;Folder Name&lt;/h2&gt; 
+    &lt;span class="fldr-items"&gt;(32 items)&lt;/span&gt;
+&lt;/div&gt;</code></pre> 
+                    </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+                    <section>
+                        <h2>Frameworks</h2>
+                        <p>Bootstrap and Foundation are very popular now</p>
+                        <p>They are NOT best practices by themselves however</p>
+                        <br>
+                        <h4>But they do enable best practices in many cases</h4>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+                        <aside class="notes">
+                            <p>And allow developers to gain efficiency</p>
+                        </aside>
+                    </section>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+                </section>
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
 
-			</div>
+                <section>
+                    <section data-background="img/aureliejouan-lights.jpg" class="overimg">
+                        <div class="bodycopy"><p></p>
+                            <h1>JavaScript</h1>
+                        </div>
+                    </section>
 
-		</div>
+                    <section>
+                        <h2>Easy one? == vs ===</h2>
+                        <p>All together now...</p><br>
+                        <p class="fragment" data-fragment-index="1">Know the difference, and use them appropriately</p>
+                        <p class="fragment" data-fragment-index="1"> ... wait, what?  You thought it was always use ===?</p>
+                        <pre><code data-trim contenteditable class="fragment" data-fragment-index="1">// Use === when both type and value equality matter
+// or when inconsistent input may cause problems
+if(1 === '1') //Returns false
+if(1 == '1') //Returns true
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+if(0 === '') //Returns false
+if(0 == '') //Returns true
 
-		<script>
+// Use == when the types are predetermined and known
+// Or when it is more concise and clear than otherwise
+if (typeof foo == 'undefined') // typeof always returns a string
+if (foo.indexOf(bar) != -1) // indexOf always returns a number
+if (foo != null) 
+// more concise than checking null and undefined, but still clear</code></pre>
+                            <aside class="notes">
+                                <p>Saw Kyle Simpson tout this at HTML5 Dev Conf, and if you know the difference and use them appropriately, all good.<p>
+                                <p>Caveat - Keep in mind other members of your team and if it'll be a stumbling block for them.</p>
+                            </aside>
+                    </section>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+                    <section>
+                        <h2>Use your Semicolons!</h2>
+                        <pre><code data-trim contenteditable>var a = obj
+[a].forEach(logProp)   // 'fail' : var a = obj[a].forEach(logProp)</code></pre>
+                        <p><small>Source - <a href="http://benalman.com/news/2013/01/advice-javascript-semicolon-haters/" target="_blank">Ben Alman</a></small><p>
+                    </section>
+                    <section>
+                        <h2>Always use curly braces</h2>
+                        <p><code>Goto fail bug</code></p>
+                        <pre><code data-trim contenteditable>hashOut.data = hashes + SSL_MD5_DIGEST_LEN;
+hashOut.length = SSL_SHA1_DIGEST_LEN;
+if ((err = SSLFreeBuffer(&hashCtx)) != 0)
+    goto fail;
+if ((err = ReadyHash(&SSLHashSHA1, &hashCtx)) != 0)
+    goto fail;
+// ...
+if ((err = SSLHashSHA1.update(&hashCtx, &signedParams)) != 0)
+    goto fail;
+    goto fail;  /* MISTAKE! THIS LINE SHOULD NOT BE HERE */
+if ((err = SSLHashSHA1.final(&hashCtx, &hashOut)) != 0)
+    goto fail;
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+err = sslRawVerify(...); /* SSL certs never fully verified */</code></pre><br><br>
+                        <p><small>Yes...this is C, not JavaScript...example was too good to pass up</small></p>
+                    </section>
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+                    <section>
+                        <h2>Blocks</h2>
+                        <p>Opening curly brace for blocks should go on the<br>same line as the declaration (in JavaScript)</p>
+                        <pre><code data-trim contenteditable>function foo() {
+    var bar = 1;
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+    return // Oops! Return == undefined
+    {
+        bar: bar
+    }
+}</code></pre>
+                    </section>
 
-		</script>
+                    <section data-background="img/tabs_spaces.png" class="overimg">
+                        <div class="bodycopy">
+                            <h2>Spaces and Tabs and indents,<br>oh my!</h2>
+                            <p>Use however many spaces per tab as you like</p>
+                            <h3>But follow your company's standard</h3>
+                            <p><small>(you do have a standard, right?)</small></p>
+                        </div>
+                        <aside class="notes">
+                            <p>important thing is not whether it's 2 or 4, but that everyone is aligned the same way<p>
+                            <p>no need to be dogmatic with others, it's mostly personal preference</p>
+                        </aside>
+                    </section>
 
-	</body>
+                    <section>
+                        <h2>JSLint (or Hint) Your Code</h2>
+                        <p>Catch errors before you refresh.</p>
+                        <p><a href="http://sublimelinter.readthedocs.org/" target="_blank">SublimeLinter</a></p>
+                    </section>
+
+                    <section>
+                        <h2>Use Strict</h2>
+                        <pre><code data-trim contenteditable>(function(){ 
+    'use strict';
+    name = 'Mike'; // Throws an error, no "var"
+    var obj = { foo: true, foo: false }; // Error, duplicate property names
+}());</code></pre>
+                        <p>Catch potential errors quicker, no side effects for old browsers.<small><sup><a href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/" target="_blank">[ref]</a><sup></small></p>
+                        <ul>
+                            <li>Prevents global variables</li>
+                            <li>Prevents duplicate properties</li>
+                            <li>Prevents accidental function overwrite</li>
+                            <li>Makes eval (a bit) less evil</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Encapsulate your Code</h2>
+                        <pre><code data-trim contenteditable>(function(){ 
+    // Do stuff here
+}());</code></pre>                        
+                        <p>Along with "use strict", keeps your variables from leaking into the global scope, makes your code more modular</p>
+                    </section>
+
+                    <section>
+                        <h2>Use the Module Pattern</h2>
+                        <pre><code data-trim contenteditable>var app = (function(){ 
+    'use strict';
+
+    var settings;
+
+    return {
+
+        init: function(initialSettings) {
+            settings = initialSettings;
+        },
+
+        getOptions: function () {
+            return settings.options;
+        }
+    };
+}());</code></pre>                        
+                        <p>Set a namespace, then expose just the parts of<br>your module that you need exposed</p>
+                        <p><small>History of <a href="http://www.klauskomenda.com/code/javascript-programming-patterns/" target="_blank">JavaScript module patterns</a> and variety of examples and links to more reading</small></p>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section data-background="img/stairs-lights.jpg" class="overimg">
+                        <div class="bodycopy"><p></p>
+                            <h1>jQuery</h1>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Still use jQuery?</h2>
+                        <ul>
+                            <li>Makes the DOM tolerable</li>
+                            <li>On a diet lately (only 32KB minified/gzipped)</li>
+                            <li>Cross-browser compatibility, events, ajax</li>
+                            <li>Plugins</li>
+                            <li>Trusted by &gt;50% of websites online</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>jQuery IS JavaScript</h2>
+                        <p>So LEARN JavaScript first (at least <a href="https://learn.jquery.com/javascript-101/" target="_blank">the basics</a>)</p>
+                        <p><a href="http://lpg.io/web-dev/javascript-resources" target="_blank">lpg.io/web-dev/javascript-resources</a></p>
+                    </section>
+
+                    <section>
+                        <h2>Isolate jQuery</h2>
+                        <p>Pass jQuery into your module</p>
+                        <pre><code data-trim contenteditable>(function ($, undefined) {
+    // ... Do Stuff with $
+    // Now jQuery scoped locally to $
+}(jQuery));</code></pre>
+                        <p><small>Bonus: undefined really is undefined</small></p>
+                    </section>
+
+                    <section>
+                        <h2>jQuery Ready</h2>
+                        <p>Don't put all your code here, just use the<br>DOM Ready event listener to kick off your init function</p>
+                        <pre><code data-trim contenteditable>(function ($, undefined) {
+    var app = {
+        init: function() {
+            // Do init stuff here
+        }
+    }
+
+    $(app.init); // app.init called on DOM ready
+    // Same as: $(function() { app.init(); });
+    //      or: $(document).ready(function() { app.init(); });
+}(jQuery));</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Cache your selector</h2>
+                        <p>If you are using a jQuery lookup more than once,<br>cache the lookup in a variable</p>
+                        <pre><code data-trim contenteditable>$('#item').text('Lorem Ipsum');
+$('#item').css('color': '#c00');
+
+// vs.
+
+var $item = $('#item');
+
+$item.text('Lorem Ipsum');
+$item.css('color', '#c00');</code></pre>
+                    <p>Use a $ to designate that it is a jQuery object. Controversial?</p>
+                    <aside class="notes">
+                        Some people object to the $ saying it is just Hungarian notation, the idea of putting the type before the variable, i.e. iItem for int or strItem for string.  Personally, I think it is just a super identifier, that doesn't need to be compared to full Hungarian notation.
+                    </aside>
+                    </section>
+
+                    <section>
+                        <h2>Chain when possible</h2>
+                        <p>Use chaining</p>
+                        <p>Format it nicely, more readable, better for debugging also</p>
+                        <pre><code data-trim contenteditable>$item
+    .text('Lorem Ipsum')
+    .css('color', '#c00');</code></pre>
+                        <p>But don't abuse chaining</p>
+                        <pre><code data-trim contenteditable>$(this).html("Back")
+    .siblings("ul")
+    .stop()
+    .css({"top":0,"opacity":1.0})
+    .fadeOut(500)
+    .focus()
+    .find("li:last")
+    .addClass("lastTestimonial")
+    .parent()
+    .parent()
+    .parent()
+    .addClass("viewAll")
+    .animate({width:697+"px"}, 1000)
+    .find(".testimonialsCntnr")
+    .animate({width:697+"px"}, 1000, 
+        function(){
+            $(".seeAllTestimonials")
+            .siblings("ul")
+            .addClass("isFullyOpen")
+            .fadeIn(500);
+            testimonialsBelt.resetBelt();
+            isAnimating = false;
+         });</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Prefer .find() and .closest()</h2>
+                        <p>More robust and succint than .children() or<br>.parent()/.parents() for traversing the DOM</p>
+                        <pre><code data-trim contenteditable>&lt;div class="wrap"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;p&gt;&lt;span class="elem"&gt;stuff&lt;/span&gt;&lt;/p&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    var $elem = $('.wrap').find('.elem');
+    var $wrap = $('.elam').closest('.wrap');
+&lt;/script&gt;</code></pre>
+                    <aside class="notes">
+                        <p>.filter() vs. .find() ?</p>
+                    </aside>
+                    </section>
+
+                    <section>
+                        <h2>Prefer defined functions to anonymous when possible</h2>
+                        <ul>
+                            <li>Cleaner, easier to read code</li>
+                            <li>Less nesting</li>
+                        </ul>
+                        <pre><code data-trim contenteditable>(function ($, undefined) {
+    var theater = {
+        init: function() {
+            // Setup control events
+            $('.thtrWrap').on('click', '.theaterNavLink', theater.changeSlide);
+            $('.thtrWrap').on('click', '.theaterLeft', theater.slideNavPrev);
+            $('.thtrWrap').on('click', '.theaterRight', theater.slideNavNext);
+        },
+        changeSlide: function(e) {
+            // ...
+        },
+        slideNavPrev: function(e) {
+            // ...
+        },
+        slideNavNext: function(e) {
+            // ...
+        }
+    }
+    $(theater.init); 
+}(jQuery));</code></pre>
+                        <p>Bonus: Event delegation.  Tip: listen on the<br>closest parent element that isn't dynamic</p>
+                    </section>
+
+                    <section>
+                        <h2>Don't pre-optimize</h2>
+                        <p>jQuery Sizzle (selector engine) is very fast</p>
+                        <h3>But be wary of .each()</h3>
+                        <p>Loops can be slow with .each(),<br>consider using a for loop</p>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Tools</h1>
+                        <p>Not Best Practices</p>
+                    </section>
+
+                    <section>
+                        <h2>Build</h2>
+                        <ul>
+                            <li>Grunt</li>
+                            <li>Gulp</li>
+                            <li>Mimosa</li>
+                            <li>Ant, Make, Jake</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Scaffolding</h2>
+                        <ul>
+                            <li>Yeoman</li>
+                            <li>Lineman</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Languages</h2>
+                        <p>for tools to work</p>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Ruby</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Frameworks</h2>
+                        <ul>
+                            <li>Backbone</li>
+                            <li>Angular</li>
+                            <li>Ember</li>
+                            <li>Bootstrap</li>
+                            <li>Foundation</li>
+                        </ul>
+                    </section>
+                </section>
+
+
+                <section>
+                    <p>There is a reason we have so many people touting best practices, new frameworks, even new languages</p><br>
+                    <h2 class="fragment" data-fragment-index="1">For love of Kitten photos, right?</h2>
+                    <img class="fragment" data-fragment-index="1" src="img/4_Kittens.jpg" alt="kitten">
+                </section>
+                <section>
+                    <h1>It's about Passion</h1>
+                    <p>We love this business, we love making things.<br><br>We set best practices to ensure the business<br>we love presents it's best face forward.</p>
+                </section>
+
+                <section>
+                    <blockquote><h3>"Blindly following Best Practices<br>is not a Best Practice."</h3></blockquote>
+                    <h4><small>- Dave Markel</small></h4>
+                    <aside class="notes">
+                        Don't be dogmatic, know why you do what you do.
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h1>About</h1>
+                    <h2>Mike Behnke</h2>
+                    <ul>
+                        <li>Front End Focused Engineer,<br>dabble on the server-side</li>
+                        <li>JavaScript &amp; Android Enthusiast</li>
+                        <li>Tech geek, futurist</li>
+                    </ul>
+                    <hr>
+                    <ul>
+                        <li>Site: <a href="http://local-pc-guy.com" target="_blank">Local-PC-Guy.com</a></li>
+                        <li>Tweets: <a href="http://twitter.com/localpcguy" target="_blank">@LocalPCGuy</a></li>
+                        <li>GitHub: <a href="http://github.com/localpcguy" target="_blank">Github.com/LocalPCGuy</a></li>
+                        <li>Slides: <a href="http://lpg.io/best-practices">http://lpg.io/best-practices</a></li>
+                        <li>Employed: <a href="http://enlighten.com" target="_blank">Enlighten Agency</a><br><small style="margin-left: 220px;">(We are hiring)</small></li>
+                    </ul>
+                </section>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                overview: true,
+
+                width: 960,
+                height: 800,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
 </html>
