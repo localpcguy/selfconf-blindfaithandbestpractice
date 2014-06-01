@@ -83,6 +83,17 @@
 				font-weight: bold;
 				font-size: 14px;
 				color: rgba( 255, 255, 255, 0.9 );
+				cursor: pointer;
+			}
+			.time .reset-button {
+				opacity: 0;
+				float: right;
+				color: #666;
+				text-decoration: none;
+				font-size: 10px;
+			}
+			.time:hover .reset-button {
+				opacity: 1;
 			}
 
 			.error {
@@ -157,7 +168,7 @@
 
 		<div class="time">
 			<div class="clock">
-				<h2>Time</h2>
+				<h2>Time <span class="reset-button">Reset</span></h2>
 				<span id="clock">0:00:00 AM</span>
 			</div>
 			<div class="elapsed">
@@ -210,9 +221,7 @@
 						minutesEl = document.getElementById( 'minutes' ),
 						secondsEl = document.getElementById( 'seconds' );
 
-					setInterval( function() {
-
-						timeEl.style.opacity = 1;
+					function _updateTimer() {
 
 						var diff, hours, minutes, seconds,
 							now = new Date();
@@ -222,14 +231,50 @@
 						minutes = Math.floor( ( diff / ( 1000 * 60 ) ) % 60 );
 						seconds = Math.floor( ( diff / 1000 ) % 60 );
 
-						clockEl.innerHTML = now.toLocaleTimeString();
+						clockEl.innerHTML = now.toLocaleTimeString( 'en-US', { hour12: true, hour: '2-digit', minute:'2-digit' } );
 						hoursEl.innerHTML = zeroPadInteger( hours );
-						hoursEl.className = hours > 0 ? "" : "mute";
-						minutesEl.innerHTML = ":" + zeroPadInteger( minutes );
-						minutesEl.className = minutes > 0 ? "" : "mute";
-						secondsEl.innerHTML = ":" + zeroPadInteger( seconds );
+						hoursEl.className = hours > 0 ? '' : 'mute';
+						minutesEl.innerHTML = ':' + zeroPadInteger( minutes );
+						minutesEl.className = minutes > 0 ? '' : 'mute';
+						secondsEl.innerHTML = ':' + zeroPadInteger( seconds );
 
-					}, 1000 );
+					}
+
+					// Update once directly
+					_updateTimer();
+
+					timeEl.style.opacity = 1;
+
+					// Then update every second
+					setInterval( _updateTimer, 1000 );
+
+					timeEl.addEventListener( 'click', function() {
+						start = new Date();
+						_updateTimer();
+						return false;
+					} );
+
+
+					// setInterval( function() {
+
+					// 	timeEl.style.opacity = 1;
+
+					// 	var diff, hours, minutes, seconds,
+					// 		now = new Date();
+
+					// 	diff = now.getTime() - start.getTime();
+					// 	hours = Math.floor( diff / ( 1000 * 60 * 60 ) );
+					// 	minutes = Math.floor( ( diff / ( 1000 * 60 ) ) % 60 );
+					// 	seconds = Math.floor( ( diff / 1000 ) % 60 );
+
+					// 	clockEl.innerHTML = now.toLocaleTimeString();
+					// 	hoursEl.innerHTML = zeroPadInteger( hours );
+					// 	hoursEl.className = hours > 0 ? "" : "mute";
+					// 	minutesEl.innerHTML = ":" + zeroPadInteger( minutes );
+					// 	minutesEl.className = minutes > 0 ? "" : "mute";
+					// 	secondsEl.innerHTML = ":" + zeroPadInteger( seconds );
+
+					// }, 1000 );
 
 					// Broadcasts the state of the notes window to synchronize
 					// the main window
